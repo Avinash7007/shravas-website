@@ -38,7 +38,7 @@ shravas-website/
 Replace `YOUR_SCRIPT_ID` in `script.js` (`CONFIG.SHEET_URL`) with your
 deployed Google Apps Script Web App URL.
 
-See the [Apps Script setup guide](https://developers.google.com/apps-script/guides/web)
+See the [Apps Script setup guide](https://avinash7007.github.io/shravas-website/)
 for full instructions.
 
 ## 🛠 Tech Stack
@@ -48,7 +48,7 @@ for full instructions.
 - IntersectionObserver for scroll animations
 - Google Apps Script for form-to-sheet integration
 
-## 📞 Contact
+## 📞 Auther
 
-**Anupam Sachdeva** · +91 85959 78817 · info@shravas-consultancies.com  
-Q-1603, Homes 121, Sector 121, Noida – 201307 (UP)
+**Avinash Dubey** · +91 7007682626 · dubeyavinash157@gmail.com
+
