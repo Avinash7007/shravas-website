@@ -147,12 +147,10 @@ button {
 }
 
 /* Logo */
-.nav__logo {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  text-decoration: none;
-  flex-shrink: 0;
+.nav-logo img{
+ height:48px;
+ width:auto;
+ object-fit:contain;
 }
 
 .nav__logo-img {
