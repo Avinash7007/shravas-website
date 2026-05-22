@@ -1,737 +1,287 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<!-- MOBILE MENU -->
+<nav class="mobile-menu"
+     id="mobileMenu"
+     role="navigation"
+     aria-label="Mobile navigation">
 
-  <!-- ═══════════════════════════════════════════════════════
-       SEO META
-       ═══════════════════════════════════════════════════════ -->
-  <title>Shravas Consultancy &amp; Services | Quality Assurance &amp; Merchandising – Noida</title>
-  <meta name="description"
-        content="Shravas Consultancy &amp; Services – Expert Quality Assurance, Merchandising, Sourcing, Factory Technical Evaluation &amp; Third Party Inspection for Apparel and Home Textiles. Lean &amp; Six Sigma consulting. Based in Noida, India." />
-  <meta name="keywords"
-        content="quality assurance consultancy India, merchandising services apparel, third party inspection textiles, lean six sigma consulting, factory technical evaluation, home textiles QA, apparel quality control, Noida consultancy" />
-  <meta name="author"  content="Shravas Consultancy &amp; Services" />
-  <meta name="robots"  content="index, follow" />
+  <a class="mobile-menu__link" href="#about" onclick="closeMobileMenu()">About</a>
 
-  <!-- ═══════════════════════════════════════════════════════
-       OPEN GRAPH / TWITTER CARD
-       ═══════════════════════════════════════════════════════ -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://shravas-consultancies.com" />
-  <meta property="og:title"       content="Shravas Consultancy &amp; Services | Quality Assurance &amp; Merchandising" />
-  <meta property="og:description" content="Expert QA, Merchandising &amp; Lean Six Sigma consulting for Apparel and Home Textiles. Noida, India." />
-  <meta property="og:image"       content="assets/images/og-image.jpg" />
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Shravas Consultancy &amp; Services" />
-  <meta name="twitter:description" content="Quality Assurance &amp; Merchandising Services for Apparel &amp; Home Textiles." />
-  <meta name="twitter:image"       content="assets/images/og-image.jpg" />
+  <a class="mobile-menu__link" href="#services" onclick="closeMobileMenu()">Services</a>
 
-  <!-- ═══════════════════════════════════════════════════════
-       FAVICON
-       ═══════════════════════════════════════════════════════ -->
-  <link rel="icon"             type="image/png" href="assets/images/favicon.png" />
-  <link rel="apple-touch-icon" type="image/png" href="assets/images/favicon.png" />
+  <a class="mobile-menu__link" href="#process" onclick="closeMobileMenu()">Process</a>
 
-  <!-- ═══════════════════════════════════════════════════════
-       FONTS  (preconnect first, then stylesheet)
-       ═══════════════════════════════════════════════════════ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com"    crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
-        rel="stylesheet" />
+  <a class="mobile-menu__link" href="#industries" onclick="closeMobileMenu()">Industries</a>
 
-  <!-- ═══════════════════════════════════════════════════════
-       STYLESHEET
-       ═══════════════════════════════════════════════════════ -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-
-  <!-- ═══════════════════════════════════════════════════════
-       SCROLL PROGRESS BAR
-       ═══════════════════════════════════════════════════════ -->
-  <div id="progress" aria-hidden="true"></div>
-
-  <!-- ═══════════════════════════════════════════════════════
-       WHATSAPP FLOATING BUTTON
-       ═══════════════════════════════════════════════════════ -->
-  <a class="wa-float"
-     href="https://wa.me/918595978817?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Shravas%20Consultancy%20services."
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Chat with us on WhatsApp">
-    <span class="wa-float__tooltip">Chat on WhatsApp</span>
-    <svg class="wa-float__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-    </svg>
+  <a class="mobile-menu__link"
+     href="#contact"
+     onclick="closeMobileMenu()">
+     Get in Touch →
   </a>
 
-  <!-- ═══════════════════════════════════════════════════════
-       HEADER / NAVIGATION
-       ═══════════════════════════════════════════════════════ -->
-  <header>
-    <nav class="nav" role="navigation" aria-label="Main navigation">
+</nav>
 
-      <a href="#" class="nav__logo" aria-label="Shravas Consultancy &amp; Services – home">
-        <img class="nav__logo-img"
-             src="assets/images/logo.png"
-             alt="Shravas Consultancy &amp; Services logo"
-             width="80" height="38"
-             loading="eager" />
-        <div class="nav__logo-text">
-          <span class="nav__logo-name">SHRAVAS</span>
-          <span class="nav__logo-sub">Consultancy &amp; Services</span>
-        </div>
-      </a>
 
-      <ul class="nav__links" role="list">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#industries">Industries</a></li>
-        <li><a href="#contact" class="nav__cta">Get in Touch</a></li>
-      </ul>
 
-      <button class="hamburger"
-              id="hamburger"
-              aria-label="Toggle navigation menu"
-              aria-expanded="false"
-              aria-controls="mobileMenu">
-        <span class="hamburger__line"></span>
-        <span class="hamburger__line"></span>
-        <span class="hamburger__line"></span>
-      </button>
+<!-- HERO SECTION -->
+<section class="hero" aria-labelledby="hero-heading">
 
-    </nav>
-  </header>
+  <div class="hero__bg"></div>
+  <div class="hero__grid"></div>
 
-  <!-- Mobile navigation panel -->
-  <nav class="mobile-menu"
-       id="mobileMenu"
-       role="navigation"
-       aria-label="Mobile navigation">
-    <a class="mobile-menu__link" href="#about"        onclick="closeMobileMenu()">About</a>
-    <a class="mobile-menu__link" href="#services"     onclick="closeMobileMenu()">Services</a>
-    <a class="mobile-menu__link" href="#process"      onclick="closeMobileMenu()">Process</a>
-    <a class="mobile-menu__link" href="#industries"   onclick="closeMobileMenu()">Industries</a>
-    <a class="mobile-menu__link" href="#testimonials" onclick="closeMobileMenu()">Testimonials</a>
-    <a class="mobile-menu__link" href="#contact"      onclick="closeMobileMenu()">Get in Touch →</a>
-  </nav>
+  <div class="hero__watermark">
+      <img src="assets/images/logo-watermark.png"
+           alt="Shravas Watermark">
+  </div>
 
-  <!-- ═══════════════════════════════════════════════════════
-       MAIN CONTENT
-       ═══════════════════════════════════════════════════════ -->
-  <main id="main-content">
+  <div class="hero__content">
 
-    <!-- ─────────────────────────────────────────────────────
-         HERO
-         ───────────────────────────────────────────────────── -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero__bg"   aria-hidden="true"></div>
-      <div class="hero__grid" aria-hidden="true"></div>
+      <p class="hero__badge">
+          QUALITY • PRECISION • EXCELLENCE
+      </p>
 
-      <div class="hero__watermark" aria-hidden="true">
-        <img src="assets/images/logo-watermark.png"
-             alt=""
-             width="420" height="388"
-             loading="eager" />
+      <h1 id="hero-heading" class="hero__title">
+          Premium Quality Assurance
+          & Merchandising Solutions
+      </h1>
+
+      <p class="hero__description">
+          Shravas Consultancy & Services delivers high-end quality assurance,
+          sourcing, merchandising, factory evaluation and Lean Six Sigma
+          consulting for apparel and home textile businesses worldwide.
+      </p>
+
+      <div class="hero__buttons">
+
+          <a href="#services" class="btn btn--primary">
+              Explore Services
+          </a>
+
+          <a href="#contact" class="btn btn--outline">
+              Contact Us
+          </a>
+
       </div>
 
-      <div class="hero__content">
-        <p class="hero__badge">Quality · Precision · Excellence</p>
+  </div>
 
-        <h1 id="hero-heading" class="hero__title">
-          Your Trusted Partner in
-          <em>Quality Assurance</em> &amp; Merchandising
-        </h1>
+  <div class="hero__stats">
 
-        <p class="hero__description">
-          Shravas Consultancy &amp; Services delivers expert QA, merchandising, and lean management
-          solutions for the apparel and home textiles industry — ensuring every product meets
-          world-class standards.
-        </p>
-
-        <div class="hero__buttons">
-          <a href="#services" class="btn btn--primary">Explore Services</a>
-          <a href="#contact"  class="btn btn--outline">Contact Us</a>
-        </div>
-      </div>
-
-      <div class="hero__stats" aria-label="Key statistics">
-        <div class="stat">
+      <div class="stat">
           <p class="stat__number">6σ</p>
-          <p class="stat__label">Six Sigma</p>
-        </div>
-        <div class="stat">
-          <p class="stat__number">2+</p>
-          <p class="stat__label">Industries</p>
-        </div>
-        <div class="stat">
-          <p class="stat__number">5+</p>
-          <p class="stat__label">Core Services</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────────────────
-         CLIENT LOGOS STRIP
-         ───────────────────────────────────────────────────── -->
-    <div class="clients" role="complementary" aria-label="Trusted by leading brands">
-      <div class="clients__inner">
-        <span class="clients__label">Trusted by leading brands</span>
-        <ul class="clients__logos" role="list">
-          <li class="clients__logo">Marks &amp; Spencer</li>
-          <li class="clients__logo">H&amp;M Group</li>
-          <li class="clients__logo">Welspun</li>
-          <li class="clients__logo">Trident Group</li>
-          <li class="clients__logo">Vardhman</li>
-          <li class="clients__logo">Raymond</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- ─────────────────────────────────────────────────────
-         ABOUT
-         ───────────────────────────────────────────────────── -->
-    <section class="section section--deep" id="about" aria-labelledby="about-heading">
-      <div class="about__grid">
-
-        <div class="js-fade">
-          <p  class="section__eyebrow">Who We Are</p>
-          <h2 class="section__title" id="about-heading">
-            Precision-Driven Consultancy for the Textile Industry
-          </h2>
-          <div class="section__divider"></div>
-          <p class="section__subtitle">
-            Shravas Consultancy &amp; Services is a specialised quality assurance and merchandising
-            consultancy headquartered in Noida, India. We partner with manufacturers, exporters, and
-            retailers across the apparel and home textiles sector to deliver measurable improvements
-            in quality, process efficiency, and supply chain performance.
-          </p>
-          <ul class="about__points" role="list">
-            <li class="about__point">
-              <span class="about__point-dot"  aria-hidden="true"></span>
-              <span class="about__point-text">Expert-led Quality Assurance across the entire production lifecycle</span>
-            </li>
-            <li class="about__point">
-              <span class="about__point-dot"  aria-hidden="true"></span>
-              <span class="about__point-text">Lean &amp; Six Sigma consulting to eliminate waste and reduce defects</span>
-            </li>
-            <li class="about__point">
-              <span class="about__point-dot"  aria-hidden="true"></span>
-              <span class="about__point-text">Third-party inspection services trusted by global buyers and brands</span>
-            </li>
-            <li class="about__point">
-              <span class="about__point-dot"  aria-hidden="true"></span>
-              <span class="about__point-text">Comprehensive factory technical evaluation and compliance audits</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="js-fade">
-          <article class="about__card">
-            <div class="about__card-icon" aria-hidden="true">🎯</div>
-            <h3>Quality Assurance &amp; Merchandising</h3>
-            <p>End-to-end quality oversight from raw material inspection to final shipment, ensuring every product meets buyer specifications and international standards.</p>
-          </article>
-          <article class="about__card">
-            <div class="about__card-icon" aria-hidden="true">📐</div>
-            <h3>Lean &amp; Six Sigma Consulting</h3>
-            <p>Data-driven process optimisation methodologies to reduce defects, improve throughput, and create sustainable operational excellence in your facilities.</p>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────────────────
-         SERVICES
-         ───────────────────────────────────────────────────── -->
-    <section class="section section--navy" id="services" aria-labelledby="services-heading">
-      <div class="section__header--center js-fade">
-        <p  class="section__eyebrow">What We Offer</p>
-        <h2 class="section__title" id="services-heading">Our Core Services</h2>
-        <div class="section__divider section__divider--center"></div>
-        <p class="section__subtitle">
-          From sourcing and merchandising to rigorous factory assessments — we cover every critical
-          touchpoint in your supply chain.
-        </p>
+          <p class="stat__label">Lean Six Sigma</p>
       </div>
 
-      <div class="services__grid">
-        <article class="services__card js-fade">
-          <div class="services__card-icon" aria-hidden="true">🔍</div>
+      <div class="stat">
+          <p class="stat__number">24/7</p>
+          <p class="stat__label">Client Support</p>
+      </div>
+
+      <div class="stat">
+          <p class="stat__number">100%</p>
+          <p class="stat__label">Quality Focus</p>
+      </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- SERVICES SECTION -->
+<section class="section section--navy"
+         id="services"
+         aria-labelledby="services-heading">
+
+  <div class="section__header--center">
+
+      <p class="section__eyebrow">
+          WHAT WE OFFER
+      </p>
+
+      <h2 class="section__title"
+          id="services-heading">
+
+          Our Premium Services
+
+      </h2>
+
+      <div class="section__divider section__divider--center"></div>
+
+      <p class="section__subtitle">
+
+          Delivering reliable inspection,
+          sourcing, merchandising,
+          quality control and factory evaluation solutions
+          for modern apparel and textile industries.
+
+      </p>
+
+  </div>
+
+  <div class="services__grid">
+
+      <article class="services__card">
+          <div class="services__card-icon">🔍</div>
           <h3>Quality Assurance</h3>
-          <p>Comprehensive in-line and final inspection services. We identify defects early and ensure your product meets all required quality standards before shipment.</p>
-        </article>
-        <article class="services__card js-fade">
-          <div class="services__card-icon" aria-hidden="true">🧵</div>
-          <h3>Merchandising Services</h3>
-          <p>Expert merchandising support from order placement through delivery — managing timelines, sampling, approvals, and production follow-up with precision.</p>
-        </article>
-        <article class="services__card js-fade">
-          <div class="services__card-icon" aria-hidden="true">📦</div>
+          <p>
+              End-to-end inspection and quality control solutions
+              ensuring international production standards.
+          </p>
+      </article>
+
+      <article class="services__card">
+          <div class="services__card-icon">🧵</div>
+          <h3>Merchandising</h3>
+          <p>
+              Professional merchandising management from
+              product development to shipment execution.
+          </p>
+      </article>
+
+      <article class="services__card">
+          <div class="services__card-icon">📦</div>
           <h3>Sourcing</h3>
-          <p>Strategic sourcing of fabrics, trims, and finished goods. We identify reliable suppliers that align with your quality expectations and cost targets.</p>
-        </article>
-        <article class="services__card js-fade">
-          <div class="services__card-icon" aria-hidden="true">🏭</div>
-          <h3>Factory Technical Evaluation</h3>
-          <p>In-depth technical assessments of manufacturing facilities evaluating infrastructure, machinery, workforce capability, and process compliance.</p>
-        </article>
-        <article class="services__card js-fade">
-          <div class="services__card-icon" aria-hidden="true">✅</div>
+          <p>
+              Reliable supplier sourcing for fabrics,
+              trims and finished products with quality assurance.
+          </p>
+      </article>
+
+      <article class="services__card">
+          <div class="services__card-icon">🏭</div>
+          <h3>Factory Evaluation</h3>
+          <p>
+              Technical audits and factory capability assessments
+              to ensure operational excellence.
+          </p>
+      </article>
+
+      <article class="services__card">
+          <div class="services__card-icon">✅</div>
           <h3>Third Party Inspection</h3>
-          <p>Independent, unbiased inspection services at every production stage — providing buyers with objective, reliable quality reports and risk assessments.</p>
-        </article>
-        <article class="services__card js-fade">
-          <div class="services__card-icon" aria-hidden="true">📊</div>
-          <h3>Lean &amp; Six Sigma</h3>
-          <p>Structured consulting programs applying lean manufacturing and Six Sigma tools to drive waste reduction, improve quality yields, and boost productivity.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────────────────
-         PROCESS TIMELINE
-         ───────────────────────────────────────────────────── -->
-    <section class="section section--deep" id="process" aria-labelledby="process-heading">
-      <div class="section__header--center js-fade">
-        <p  class="section__eyebrow">How We Work</p>
-        <h2 class="section__title" id="process-heading">Our Process</h2>
-        <div class="section__divider section__divider--center"></div>
-      </div>
-
-      <ol class="process__steps" role="list">
-        <li class="process__step js-fade">
-          <div class="process__step-num"  aria-hidden="true">01</div>
-          <div class="process__step-icon" aria-hidden="true">🔎</div>
-          <h3>Inspection</h3>
-          <p>In-line &amp; final product inspection at every critical stage of production</p>
-        </li>
-        <li class="process__step js-fade">
-          <div class="process__step-num"  aria-hidden="true">02</div>
-          <div class="process__step-icon" aria-hidden="true">🏭</div>
-          <h3>Evaluation</h3>
-          <p>Technical factory audit covering infrastructure, process &amp; compliance</p>
-        </li>
-        <li class="process__step js-fade">
-          <div class="process__step-num"  aria-hidden="true">03</div>
-          <div class="process__step-icon" aria-hidden="true">📋</div>
-          <h3>Reporting</h3>
-          <p>Detailed, unbiased quality reports delivered to buyers &amp; brands</p>
-        </li>
-        <li class="process__step js-fade">
-          <div class="process__step-num"  aria-hidden="true">04</div>
-          <div class="process__step-icon" aria-hidden="true">📈</div>
-          <h3>Improvement</h3>
-          <p>Lean &amp; Six Sigma action plans to drive continuous quality improvement</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- ─────────────────────────────────────────────────────
-         INDUSTRIES
-         ───────────────────────────────────────────────────── -->
-    <section class="section section--navy" id="industries" aria-labelledby="industries-heading">
-      <div class="industries__grid">
-
-        <div class="js-fade">
-          <p  class="section__eyebrow">Sectors We Serve</p>
-          <h2 class="section__title" id="industries-heading">Industry Focus</h2>
-          <div class="section__divider"></div>
-          <p class="section__subtitle">
-            Deep domain expertise in textile and apparel, understanding the unique quality challenges
-            at every level of the supply chain.
+          <p>
+              Independent and transparent inspection services
+              trusted by buyers and global brands.
           </p>
-          <ul class="industries__list" role="list">
-            <li class="industries__item">
-              <span class="industries__item-num" aria-hidden="true">01</span>
-              <div class="industries__item-info">
-                <h3>Apparels</h3>
-                <p>Woven, knits, denim, activewear, fast fashion &amp; luxury brands</p>
-              </div>
-            </li>
-            <li class="industries__item">
-              <span class="industries__item-num" aria-hidden="true">02</span>
-              <div class="industries__item-info">
-                <h3>Home Textiles</h3>
-                <p>Bedding, bath linen, curtains, cushions &amp; decorative furnishings</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+      </article>
 
-        <div class="industries__visual js-fade" aria-hidden="true">
-          <div class="industries__box">
-            <div class="industries__box-icon">👔</div>
-            <h4>Apparel</h4>
-            <p>Garments &amp; Fashion</p>
-          </div>
-          <div class="industries__box">
-            <div class="industries__box-icon">🛏️</div>
-            <h4>Bedding</h4>
-            <p>Home Textiles</p>
-          </div>
-          <div class="industries__box">
-            <div class="industries__box-icon">🪡</div>
-            <h4>Fabric</h4>
-            <p>Raw Material QA</p>
-          </div>
-          <div class="industries__box">
-            <div class="industries__box-icon">🌿</div>
-            <h4>Sustainable</h4>
-            <p>Eco-Compliance</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────────────────
-         WHY US
-         ───────────────────────────────────────────────────── -->
-    <section class="section section--deep" id="why" aria-labelledby="why-heading">
-      <div class="js-fade" style="max-width:480px">
-        <p  class="section__eyebrow">Why Choose Us</p>
-        <h2 class="section__title" id="why-heading">The Shravas Advantage</h2>
-        <div class="section__divider"></div>
-      </div>
-
-      <ul class="why__grid" role="list">
-        <li class="why__card js-fade">
-          <p class="why__card-num" aria-hidden="true">01</p>
-          <h3>Industry Expertise</h3>
-          <p>Deep hands-on experience in apparel and home textile manufacturing, giving unmatched insight at every production stage.</p>
-        </li>
-        <li class="why__card js-fade">
-          <p class="why__card-num" aria-hidden="true">02</p>
-          <h3>Independent &amp; Unbiased</h3>
-          <p>As a third-party consultancy, our assessments are fully objective — protecting buyer and seller interests with transparent reporting.</p>
-        </li>
-        <li class="why__card js-fade">
-          <p class="why__card-num" aria-hidden="true">03</p>
-          <h3>Lean &amp; Six Sigma Certified</h3>
-          <p>Qualified practitioners delivering structured, data-backed improvement programs that generate real, measurable ROI.</p>
-        </li>
-        <li class="why__card js-fade">
-          <p class="why__card-num" aria-hidden="true">04</p>
-          <h3>End-to-End Coverage</h3>
-          <p>From sourcing and sampling to final inspection and factory audits — a single trusted partner for your entire value chain.</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ─────────────────────────────────────────────────────
-         TESTIMONIALS
-         ───────────────────────────────────────────────────── -->
-    <section class="section section--navy" id="testimonials" aria-labelledby="testimonials-heading">
-      <div class="section__header--center js-fade">
-        <p  class="section__eyebrow">Client Feedback</p>
-        <h2 class="section__title" id="testimonials-heading">What Our Clients Say</h2>
-        <div class="section__divider section__divider--center"></div>
-      </div>
-
-      <ul class="testimonials__grid" role="list">
-        <li class="testimonials__card js-fade">
-          <p class="testimonials__quote-mark" aria-hidden="true">&#8220;</p>
-          <p class="testimonials__stars" aria-label="5 out of 5 stars">★★★★★</p>
-          <blockquote class="testimonials__text">
-            Shravas transformed our quality control process. Their factory evaluation caught critical
-            compliance gaps before our buyer's audit — saving us significant time and cost.
-            Highly professional team.
-          </blockquote>
-          <div class="testimonials__author">
-            <div class="testimonials__avatar" aria-hidden="true">RK</div>
-            <div class="testimonials__author-info">
-              <h3>Rajesh Kumar</h3>
-              <span>Head of Operations, Apparel Manufacturer — Gurugram</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="testimonials__card js-fade">
-          <p class="testimonials__quote-mark" aria-hidden="true">&#8220;</p>
-          <p class="testimonials__stars" aria-label="5 out of 5 stars">★★★★★</p>
-          <blockquote class="testimonials__text">
-            Their Lean Six Sigma consulting brought our defect rate down by over 30% in just two
-            months. The team's understanding of the textile industry is exceptional — they speak the
-            language of the factory floor.
-          </blockquote>
-          <div class="testimonials__author">
-            <div class="testimonials__avatar" aria-hidden="true">PS</div>
-            <div class="testimonials__author-info">
-              <h3>Priya Sharma</h3>
-              <span>Quality Director, Home Textiles Export House — Noida</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="testimonials__card js-fade">
-          <p class="testimonials__quote-mark" aria-hidden="true">&#8220;</p>
-          <p class="testimonials__stars" aria-label="5 out of 5 stars">★★★★★</p>
-          <blockquote class="testimonials__text">
-            We rely on Shravas for all our third-party inspections. Their reports are thorough,
-            unbiased, and always on time. A partner we trust completely for our global supply chain.
-          </blockquote>
-          <div class="testimonials__author">
-            <div class="testimonials__avatar" aria-hidden="true">AM</div>
-            <div class="testimonials__author-info">
-              <h3>Amit Mehta</h3>
-              <span>Sourcing Manager, International Fashion Brand</span>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ─────────────────────────────────────────────────────
-         CONTACT
-         ───────────────────────────────────────────────────── -->
-    <section class="section section--deep" id="contact" aria-labelledby="contact-heading">
-      <div class="contact__grid">
-
-        <!-- Left: contact details -->
-        <div class="js-fade">
-          <p  class="section__eyebrow">Get in Touch</p>
-          <h2 class="section__title" id="contact-heading">Let's Work Together</h2>
-          <div class="section__divider"></div>
-          <p class="section__subtitle">
-            Reach out to discuss your quality assurance, merchandising, or lean consulting
-            requirements.
+      <article class="services__card">
+          <div class="services__card-icon">📊</div>
+          <h3>Lean & Six Sigma</h3>
+          <p>
+              Process optimization strategies designed
+              to reduce defects and improve productivity.
           </p>
+      </article>
 
-          <address class="contact__info" style="font-style:normal">
-            <div class="contact__item">
-              <div class="contact__icon" aria-hidden="true">📍</div>
-              <div>
-                <p class="contact__label">Address</p>
-                <p class="contact__value">Q-1603, Homes 121, Sector 121<br>Noida – 201307, Uttar Pradesh</p>
-              </div>
-            </div>
-            <div class="contact__item">
-              <div class="contact__icon" aria-hidden="true">📞</div>
-              <div>
-                <p class="contact__label">Phone</p>
-                <p class="contact__value"><a href="tel:+918595978817">+91 85959 78817</a></p>
-              </div>
-            </div>
-            <div class="contact__item">
-              <div class="contact__icon" aria-hidden="true">✉️</div>
-              <div>
-                <p class="contact__label">Email</p>
-                <p class="contact__value">
-                  <a href="mailto:info@shravas-consultancies.com">info@shravas-consultancies.com</a>
-                </p>
-              </div>
-            </div>
-            <div class="contact__item">
-              <div class="contact__icon" aria-hidden="true">👤</div>
-              <div>
-                <p class="contact__label">Contact Person</p>
-                <p class="contact__value">Anupam Sachdeva</p>
-              </div>
-            </div>
-          </address>
-        </div>
+  </div>
 
-        <!-- Right: enquiry form -->
-        <div class="js-fade">
-          <form id="contactForm" class="contact__form" novalidate aria-label="Enquiry form">
+</section>
 
-            <div class="form__row">
-              <div class="form__group">
-                <label class="form__label" for="f-name">
-                  Full Name <span class="form__required" aria-hidden="true">*</span>
-                </label>
-                <input class="form__input"
-                       type="text" id="f-name"
-                       placeholder="Your full name"
-                       autocomplete="name"
-                       aria-required="true"
-                       aria-describedby="e-name" />
-                <span class="form__error" id="e-name" role="alert">Please enter your name</span>
-              </div>
-              <div class="form__group">
-                <label class="form__label" for="f-company">Company</label>
-                <input class="form__input"
-                       type="text" id="f-company"
-                       placeholder="Company name"
-                       autocomplete="organization" />
-              </div>
-            </div>
 
-            <div class="form__row">
-              <div class="form__group">
-                <label class="form__label" for="f-email">
-                  Email <span class="form__required" aria-hidden="true">*</span>
-                </label>
-                <input class="form__input"
-                       type="email" id="f-email"
-                       placeholder="your@email.com"
-                       autocomplete="email"
-                       aria-required="true"
-                       aria-describedby="e-email" />
-                <span class="form__error" id="e-email" role="alert">Please enter a valid email address</span>
-              </div>
-              <div class="form__group">
-                <label class="form__label" for="f-phone">
-                  Phone <span class="form__required" aria-hidden="true">*</span>
-                </label>
-                <input class="form__input"
-                       type="tel" id="f-phone"
-                       placeholder="+91 98765 43210"
-                       autocomplete="tel"
-                       aria-required="true"
-                       aria-describedby="e-phone" />
-                <span class="form__error" id="e-phone" role="alert">Please enter a valid phone number</span>
-              </div>
-            </div>
 
-            <div class="form__group">
-              <label class="form__label" for="f-service">
-                Service Required <span class="form__required" aria-hidden="true">*</span>
-              </label>
-              <select class="form__select"
-                      id="f-service"
-                      aria-required="true"
-                      aria-describedby="e-service">
-                <option value="">— Select a service —</option>
-                <option>Quality Assurance</option>
-                <option>Merchandising Services</option>
-                <option>Sourcing</option>
-                <option>Factory Technical Evaluation</option>
-                <option>Third Party Inspection</option>
-                <option>Lean &amp; Six Sigma Consulting</option>
-              </select>
-              <span class="form__error" id="e-service" role="alert">Please select a service</span>
-            </div>
+<!-- REMOVE TESTIMONIAL SECTION COMPLETELY -->
 
-            <div class="form__group">
-              <label class="form__label" for="f-message">Message</label>
-              <textarea class="form__textarea"
-                        id="f-message"
-                        placeholder="Tell us about your requirements…"
-                        rows="4"></textarea>
-            </div>
 
-            <button class="btn btn--submit" id="submitBtn" type="button">
-              <span id="btnText">Send Enquiry →</span>
-              <span class="btn__spinner" id="spinner" aria-hidden="true"></span>
-            </button>
 
-          </form>
+<!-- FOOTER -->
+<footer class="footer">
 
-          <!-- Success state (shown after submission) -->
-          <div class="form__success" id="formSuccess" role="alert" aria-live="polite">
-            <h3>✅ Enquiry Sent Successfully!</h3>
-            <p>
-              Thank you for reaching out. <strong>Anupam Sachdeva</strong> will respond within
-              24 hours.<br><br>
-              Direct contact:
-              <a href="tel:+918595978817">+91 85959 78817</a>
-              &nbsp;|&nbsp;
-              <a href="https://wa.me/918595978817" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </p>
-          </div>
-        </div>
+  <div class="footer__inner">
 
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ═══════════════════════════════════════════════════════
-       FOOTER
-       ═══════════════════════════════════════════════════════ -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer__inner">
-
-      <!-- Brand column -->
       <div class="footer__brand">
-        <a href="#" class="footer__logo" aria-label="Shravas – back to top">
-          <img class="footer__logo-img"
-               src= "assets/images/logo.png" alt="Shravas Logo"
-               width="80" height="40"
-               loading="lazy" />
-          <div>
-            <span class="footer__logo-name">SHRAVAS</span>
-            <span class="footer__logo-sub">Consultancy &amp; Services</span>
-          </div>
-        </a>
-        <p class="footer__description">
-          Quality Assurance &amp; Merchandising Services for Apparel and Home Textiles.
-          Lean &amp; Six Sigma consulting. Headquartered in Noida, India.
-        </p>
-        <div class="footer__social" aria-label="Social links">
-          <a class="footer__social-link"
-             href="https://www.linkedin.com/company/shravas-consultancy"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="LinkedIn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-              <circle cx="4" cy="4" r="2"/>
-            </svg>
+
+          <a href="#" class="footer__logo">
+
+              <img class="footer__logo-img"
+                   src="assets/images/logo.png"
+                   alt="Shravas Logo">
+
+              <div>
+
+                  <span class="footer__logo-name">
+                      SHRAVAS
+                  </span>
+
+                  <span class="footer__logo-sub">
+                      Consultancy & Services
+                  </span>
+
+              </div>
+
           </a>
-          <a class="footer__social-link"
-             href="https://wa.me/918595978817"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="WhatsApp">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-            </svg>
-          </a>
-          <a class="footer__social-link"
-             href="mailto:info@shravas-consultancies.com"
-             aria-label="Email">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-          </a>
-        </div>
+
+          <p class="footer__description">
+
+              Premium Quality Assurance &
+              Merchandising solutions for
+              Apparel and Home Textile industries.
+
+          </p>
+
       </div>
 
-      <!-- Services links -->
-      <nav class="footer__col" aria-label="Services links">
-        <h3 class="footer__col-title">Services</h3>
-        <ul class="footer__col-links" role="list">
-          <li><a href="#services">Quality Assurance</a></li>
-          <li><a href="#services">Merchandising</a></li>
-          <li><a href="#services">Sourcing</a></li>
-          <li><a href="#services">Factory Evaluation</a></li>
-          <li><a href="#services">Third Party Inspection</a></li>
-          <li><a href="#services">Lean &amp; Six Sigma</a></li>
-        </ul>
-      </nav>
+      <div class="footer__col">
 
-      <!-- Contact links -->
-      <nav class="footer__col" aria-label="Contact links">
-        <h3 class="footer__col-title">Contact</h3>
-        <ul class="footer__col-links" role="list">
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#process">Our Process</a></li>
-          <li><a href="tel:+918595978817">+91 85959 78817</a></li>
-          <li><a href="mailto:info@shravas-consultancies.com">info@shravas-consultancies.com</a></li>
-          <li><a href="https://wa.me/918595978817" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
-        </ul>
-      </nav>
+          <h3 class="footer__col-title">
+              Services
+          </h3>
 
-    </div>
+          <ul class="footer__col-links">
 
-    <div class="footer__bottom">
-      <p>© 2025 Shravas Consultancy &amp; Services. All rights reserved.</p>
-      <p>Q-1603, Homes 121, Sector 121, Noida – 201307 (UP)</p>
-    </div>
-  </footer>
+              <li><a href="#services">Quality Assurance</a></li>
 
-  <!-- ═══════════════════════════════════════════════════════
-       JAVASCRIPT  (defer = non-blocking, runs after parse)
-       ═══════════════════════════════════════════════════════ -->
-  <script src="script.js" defer></script>
+              <li><a href="#services">Merchandising</a></li>
 
-</body>
-</html>
+              <li><a href="#services">Sourcing</a></li>
+
+              <li><a href="#services">Factory Evaluation</a></li>
+
+              <li><a href="#services">Third Party Inspection</a></li>
+
+          </ul>
+
+      </div>
+
+      <div class="footer__col">
+
+          <h3 class="footer__col-title">
+              Contact
+          </h3>
+
+          <ul class="footer__col-links">
+
+              <li>
+                  <a href="tel:+918595978817">
+                      +91 85959 78817
+                  </a>
+              </li>
+
+              <li>
+                  <a href="mailto:info@shravas-consultancies.com">
+                      info@shravas-consultancies.com
+                  </a>
+              </li>
+
+              <li>
+                  <a href="https://wa.me/918595978817">
+                      WhatsApp Us
+                  </a>
+              </li>
+
+          </ul>
+
+      </div>
+
+  </div>
+
+  <div class="footer__bottom">
+
+      <p>
+          © 2025 Shravas Consultancy & Services.
+          All rights reserved.
+      </p>
+
+  </div>
+
+</footer>
